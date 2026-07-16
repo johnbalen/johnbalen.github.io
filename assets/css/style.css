@@ -609,7 +609,7 @@ section {
   left: 0;
   right: 0;
   bottom: -60px;
-  z-index: 3;
+  z-index: 99;
   position: absolute;
   transition: all ease-in-out 0.3s;
   display: flex;
@@ -1165,9 +1165,12 @@ section {
     z-index: 10;
 }
 
-.portfolio .portfolio-wrap::before,
+.portfolio .portfolio-wrap::before {
+  pointer-events: none;
+}
+
 .portfolio .portfolio-wrap .portfolio-links {
-    pointer-events: none;
+  pointer-events: auto;
 }
 
 .video-title {
@@ -1197,7 +1200,12 @@ section {
 }
 
 
-
+.glightbox-desc {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
 
 .portfolio-item{
     margin-bottom:30px;
@@ -1213,3 +1221,4 @@ section {
 .video-container iframe{
     box-shadow:0 4px 15px rgba(0,0,0,.25);
 }
+
